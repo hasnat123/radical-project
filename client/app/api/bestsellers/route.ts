@@ -9,8 +9,8 @@ export async function GET(request: NextRequest) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            cache: 'no-store', // This tells Next.js to not cache this request
-            next: { revalidate: 0 } // This is for Next.js 13+
+            cache: 'no-store',
+            next: { revalidate: 0 }
         });
 
         if (!res.ok) {

@@ -36,7 +36,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json', // Add this line
+        'Accept': 'application/json',
       },
       cache: 'no-store',
       body: JSON.stringify({ price, rating }),
@@ -59,7 +59,6 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 
   const id = params.id;
 
-  // Use the id and body to update data in your backend
   const url = new URL(`http://localhost:8000/api/favourites/${id}`);
 
   try {

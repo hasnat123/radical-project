@@ -33,7 +33,6 @@ export async function POST(request: NextRequest) {
 
   const { id, title, author } = await request.json();
 
-  // Use the id and body to update data in your backend
   const url = new URL('http://localhost:8000/api/favourites');
 
   try {
@@ -54,15 +53,15 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json(data);
   } catch (error: any) {
-    // console.error('Error:', error);
-    // return NextResponse.json({ error: 'Failed to toggle favourite' }, { status: 500 });
 
     try {
       const errorData = JSON.parse(error.message);
-      // If successful, it means we received a structured error from the API
+
+      // If successful means we received structured error from API
       return NextResponse.json(errorData, { status: error.status || 500 });
     } catch {
-      // If parsing fails, it means it's not a structured error from the API
+      
+      // If parsing fails it's not a structured error from the API
       return NextResponse.json({ error: 'Failed to toggle favourite' }, { status: 500 });
     }
   }
