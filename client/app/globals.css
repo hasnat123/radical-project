@@ -16,7 +16,13 @@
   }
 }
 
-/* base styles */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Base Styles */
 body {
   @apply bg-[#E9EDF6] text-gray-500 text-[#5B5B5B];
 }
@@ -29,10 +35,4 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }

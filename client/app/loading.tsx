@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Loading = () => {
+const Loading: React.FunctionComponent = (): JSX.Element => {
   return (
     <div className="text-center">
         <div role="status">

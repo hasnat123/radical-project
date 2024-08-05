@@ -5,7 +5,7 @@ import Searchbar from "../components/Searchbar";
 import BookList from "../components/BookList";
 import Loading from "../loading";
 
-const Page = ({ searchParams }: { searchParams: { query?: string } }) => {
+const Page = ({ searchParams }: { searchParams: { query?: string } }): JSX.Element => {
 
   return (
     <div className='w-full max-w-[700px] lg:max-w-[949px]'>

@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
+    // Mass assignable attributes
     protected $fillable = ['id', 'title', 'author', 'rating', 'price'];
 
+    // Scope to filter books by title or author
     public function scopeFilter($query, $title)
     {
         if($title ?? false)
@@ -18,6 +20,7 @@ class Book extends Model
         }
     }
 
+    // Disable auto-incrementing IDs
     public $incrementing = false;
 
     use HasFactory;

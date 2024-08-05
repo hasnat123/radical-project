@@ -15,12 +15,7 @@ const Navbar: React.FunctionComponent<SharedNavProps> = ({ navOpen, setNavOpen})
     const navbarRef = useRef<HTMLDivElement>(null);
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target as Node))
-      {
-        console.log('meow')
-
-        setNavOpen(false);
-      }
+      if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) setNavOpen(false);
     };
   
     useEffect(() => {
@@ -68,7 +63,8 @@ const Navbar: React.FunctionComponent<SharedNavProps> = ({ navOpen, setNavOpen})
         </div>
         <div className='relative flex flex-1 items-center justify-center h-full'>
             <div
-                className={`absolute z-[-1] bg-gradient-to-t from-[#4072EE] to-[#679CF6] w-full lg:w-[96px] h-[70px] lg:rounded-tr-md lg:rounded-br-md ${pathname === '/' ? 'hidden' : pathname.includes('/bestsellers') ? 'translate-y-[-70px]' : 'translate-y-0'} transition-transform duration-300`}
+                // className={`absolute z-[-1] bg-gradient-to-t from-[#4072EE] to-[#679CF6] w-full lg:w-[96px] h-[70px] lg:rounded-tr-md lg:rounded-br-md ${pathname === '/' ? 'hidden' : pathname.includes('/bestsellers') ? 'translate-y-[-70px]' : 'translate-y-0'} transition-transform duration-300`}
+                className={`absolute z-[-1] bg-gradient-to-t from-[#4072EE] to-[#679CF6] w-full lg:w-[96px] h-[70px] lg:rounded-tr-md lg:rounded-br-md ${(!pathname.includes('/bestsellers') && !pathname.includes('/favourites')) ? 'hidden' : pathname.includes('/bestsellers') ? 'translate-y-[-70px]' : 'translate-y-0'} transition-transform duration-300`}
             >
             </div>
             <ul className='flex flex-col items-center w-full'>

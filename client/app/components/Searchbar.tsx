@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import React, { ChangeEvent, FormEvent, useState } from 'react'
 
-const Searchbar = ({ favourites }: { favourites: boolean}) => {
+const Searchbar = ({ favourites }: { favourites: boolean}): JSX.Element => {
 
     const [query, setQuery] = useState<string>('');
 

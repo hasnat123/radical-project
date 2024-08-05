@@ -13,15 +13,19 @@ class FavouriteController extends Controller
 {
     protected $APIService;
 
+    // Dependency injection for APIService
     public function __construct(APIService $APIService)
     {
         $this->APIService = $APIService;
     }
 
+    // Get a list of favourite books with optional search filtering
     public function index(Request $request)
     {
         $query = $request->input('query');
         // $favoriteBooks = Book::latest()->filter($query)->paginate(20);
+        
+        // Fetch favourite books with optional filter
         $favoriteBooks = Book::latest()->filter($query)->get();
 
         return response()->json($favoriteBooks);
@@ -35,6 +39,7 @@ class FavouriteController extends Controller
     public function update(Request $request, Book $book)
     {
 
+        // Validate and update book details
         $formFields = $request->validate([
             'price' => 'numeric|between:0,99.99',
             'rating' => 'integer|min:1|max:5'
@@ -78,6 +83,7 @@ class FavouriteController extends Controller
 
         else
         {
+            // Remove existing book from favourites
             $book->delete();
             return response()->json(['message' => 'Book removed from favorites']);
         }

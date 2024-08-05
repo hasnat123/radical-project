@@ -13,11 +13,13 @@ class BestSellersController extends Controller
 {
     protected $APIService;
 
+    // Dependency injection for APIService
     public function __construct(APIService $APIService)
     {
         $this->APIService = $APIService;
     }
 
+    // Merge external books with internal favourites
     public function mergeFavourites($books)
     {
         $favouriteBooks = Book::all();
@@ -51,15 +53,15 @@ class BestSellersController extends Controller
         return $mergedBooks;
     }
 
+    // Return the list of books with favourites merged
     public function index()
     {
         $books = $this->APIService->getList();
 
         return response()->json($this->mergeFavourites($books));
-        // return response()->json(['message' => 'meow']);
-
     }
 
+    // Search for books and merge with favourites
     public function search(Request $request)
     {
         $query = $request->input('query');

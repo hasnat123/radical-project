@@ -49,10 +49,6 @@ class APIService
             'api-key' => $this->apiKey
         ]);
 
-        // if ($response->successful() && isset($response['results'][0])) {
-        //     return $response['results'][0];
-        // }
-
         if ($response->successful()) {
             return $response->json();
         }
