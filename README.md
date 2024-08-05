@@ -3,7 +3,7 @@
 
 Hello, this is my full-stack application built with Laravel (backend) and Next.js (frontend) to complete the Radical Dev Challenge. I'm super sorry for not being able to provide a fully hosted application, I had everything set up and working but of course something went wrong last minute. I know it's tedious having to clone repositories instead, but hopefully my instructions are decent enough to be able to get things running without any issues :) Also, if you end up using my Google Books API key found in the example .env file and the books fail to load after getting the app running, it is most likely due to the APIs rate limiting. To solve this, you can wait a bit until the daily limit is reset, or you can create your own Google Books API key which only takes a couple of minutes, the link for which can be found below in the instructions.
 
-P.S. I deployed the client side seperately on Vercel which you can have a look at here: https://radical-practice-53q1t31f7-hasnats-projects-81eeb542.vercel.app/
+P.S. I deployed the client side seperately on Vercel which you can have a look at here: https://radical-client.vercel.app/
 
 
 ## Prerequisites
