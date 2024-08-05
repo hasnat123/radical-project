@@ -1,7 +1,7 @@
 ﻿# radical-project
 
 
-Hello, This is my full-stack application built with Laravel (backend) and Next.js (frontend) to complete the Radical Dev Challenge. I'm super sorry for not being able to provide a fully hosted application, I had everything set up and working but of course something went wrong last minute. I know it's tedious having to clone repositories instead, but hopefully my instructions are decent enough to be able to get things running without any issues :)
+Hello, this is my full-stack application built with Laravel (backend) and Next.js (frontend) to complete the Radical Dev Challenge. I'm super sorry for not being able to provide a fully hosted application, I had everything set up and working but of course something went wrong last minute. I know it's tedious having to clone repositories instead, but hopefully my instructions are decent enough to be able to get things running without any issues :)
 
 P.S. I deployed the client side seperately on Vercel which you can have a look at here: https://radical-practice-53q1t31f7-hasnats-projects-81eeb542.vercel.app/
 
